@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "Resolver",
+    platforms: [
+        .macOS(.v10_10), .iOS(.v9), .tvOS(.v9)
+    ],
     products: [
         .library(
             name: "Resolver",
@@ -13,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Quick/Quick", from: "2.2.0"),
-        .package(url: "https://github.com/Quick/Nimble", from: "8.0.0"),
+        .package(url: "https://github.com/Quick/Nimble", from: "9.1.0"),
     ],
     targets: [
         .target(
